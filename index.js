@@ -2,6 +2,7 @@ const Twit = require('twit');
 
 require('dotenv').config();
 const config = require('./config');
+const video = require('./vid');
 
 const bot = new Twit(config);
 
@@ -12,7 +13,7 @@ const stream = bot.stream('statuses/filter', {
 stream.on('tweet', tweetEvent); //trigger event
 
 function tweetEvent(tweet) {
-  const filePath = './src/appvd.mp4';
+  const filePath = video.source;
 
   bot.postMediaChunked({ file_path: filePath }, function (err, data, response) {
     const idString = data.media_id_string;
