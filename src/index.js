@@ -1,31 +1,31 @@
 const Twit = require('twit');
-
 require('dotenv').config();
-const config = require('./controllers/config'); //api access
-const videos = require('./controllers/data'); //video database
 
-for (let video in videos) {
-  const bot = new Twit(config);
+const config = require('./controllers/config'); //api access keys config
+const videos = require('./controllers/data'); //video path database
+const bot = new Twit(config);
 
-  const stream = bot.stream('statuses/filter', {
-    track: ['@KnucklesReview'], //check mentions
-  });
+const stream = bot.stream('statuses/filter', {
+  track: ['@KnucklesReview'], //check mentions
+});
 
-  stream.on('tweet', tweetEvent); //trigger event
+stream.on('tweet', tweetEvent); //trigger event
 
-  function tweetEvent(tweet) {
-    const txt = tweet.text;
-    console.log(txt);
+function tweetEvent(mention) {
+  const tweet = mention.text;
+  const name = mention.user.screen_name;
+  const replyID = mention.id_str;
 
-    if (txt === videos[video].code) {
+  console.log(`${name} mentioned Knuckles`);
+
+  for (let video in videos) {
+    if (tweet === videos[video].code) {
+      //search videos in path database based on the "code" property
       const filePath = videos[video].source;
 
-      // chunked media upload function
+      //chunked upload
       bot.postMediaChunked({ file_path: filePath }, (err, data, response) => {
         const idString = data.media_id_string;
-
-        const name = tweet.user.screen_name;
-        const replyID = tweet.id_str;
 
         //reply params
         const params = {
@@ -39,7 +39,7 @@ for (let video in videos) {
           if (err !== undefined) {
             console.log(err);
           } else {
-            console.log(`Replied ${name}`);
+            console.log(`Replied ${name} successfully`);
           }
         });
       });
