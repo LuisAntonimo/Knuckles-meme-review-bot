@@ -1,4 +1,4 @@
-# KNUCKLES MEME REVIEW BOT :robot:
+# KNUCKLES MEME REVIEW BOT :robot
 
 ![Knuckles meme](<https://i.kym-cdn.com/entries/icons/facebook/000/033/650/maxresdefault_(1).jpg>)
 
@@ -10,17 +10,17 @@
 
 ### About the project
 
-#### Português:
+#### Português
 
 Esse é um projeto de bot para o Twitter que envia diferentes vídeos como resposta dependendo da forma que é mencionado.
 
-#### English:
+#### English
 
 This is a Twitter bot project that answers you with different videos depending of the way it is mentioned.
 
 ### How it works
 
-#### Português:
+#### Português
 
 Basicamente ao marcar o perfil @KnucklesReview seguido de uma palavra específica, o bot fará o upload do vídeo correto como resposta ao tweet.
 
@@ -29,7 +29,7 @@ Basicamente ao marcar o perfil @KnucklesReview seguido de uma palavra específic
 | @KnucklesReview denied   | <https://youtu.be/3vH6GBbeAgA> |
 | @KnucklesReview dunno    | <https://youtu.be/zLPOsXP2Y7o> |
 
-#### English:
+#### English
 
 Basically, when @KnucklesReview account is mentioned followed by an specific word, the bot will upload the correct video as answer.
 
@@ -42,7 +42,7 @@ Basically, when @KnucklesReview account is mentioned followed by an specific wor
 
 clone the repository
 
-`git clone <https://github.com/LuisAntonimo/KnucklesBot.git>`
+`git clone https://github.com/LuisAntonimo/KnucklesBot.git`
 
 install dependencies
 
