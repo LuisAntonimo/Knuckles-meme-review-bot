@@ -10,6 +10,8 @@
 
 ### About the project
 
+---
+
 #### Português
 
 Esse é um projeto de bot para o Twitter que envia diferentes vídeos como resposta dependendo da forma que é mencionado.
@@ -19,6 +21,8 @@ Esse é um projeto de bot para o Twitter que envia diferentes vídeos como respo
 This is a Twitter bot project that answers you with different videos depending of the way it is mentioned.
 
 ### How it works
+
+---
 
 #### Português
 
@@ -39,6 +43,8 @@ Basically, when @KnucklesReview account is mentioned followed by an specific wor
 | @KnucklesReview dunno    | <https://youtu.be/zLPOsXP2Y7o> |
 
 ### Contributing
+
+---
 
 clone the repository
 
