@@ -4,9 +4,9 @@
 
 ## Table of Contents 📚
 
-- [About the project](#about-the-project)
-- [How it Works](#how-it-works)
-- [Contributing](#contributing)
+- [About the project](#about-the-project-ℹ)
+- [How it Works](#how-it-works-)
+- [Contributing](#contributing-)
 
 ## About the project ℹ
 
